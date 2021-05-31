@@ -24,6 +24,10 @@ body {
   .description{
     white-space: pre-wrap;
   }
+
+  .lead {
+    font-size: 25px;
+  }
   
   .time-block{
     text-align: center;
