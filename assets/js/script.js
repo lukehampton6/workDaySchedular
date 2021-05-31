@@ -1,20 +1,9 @@
 var currentDate = moment().format("dddd, MMMM Do YYYY");
-var currentTime = moment();
+var currentHour = moment().format("H");
 var displayDate = document.getElementById("currentDay");
 displayDate.textContent = currentDate;
 
-var timeSlots = [
-  {
-    hourNine: moment().hour(9),
-  },
-  {
-    hourTen: moment().hour(10),
-  },
-];
-
-console.log(timeSlots.hourNine);
-
-var tasks = {};
+var tasks = [];
 
 //load tasks from local storage
 var loadTasks = function () {
@@ -45,19 +34,5 @@ $(".container").on("blur", "textarea", function () {
 
   $(this).replaceWith(taskP);
 });
-
-var checkTime = function () {
-  var time = $().find();
-};
-
-var hourNine = moment().hour(9);
-var hourTen = moment().hour(10);
-var hourEleven = moment().hour(11);
-var hourTwelve = moment().hour(12);
-var hourThirteen = moment().hour(13);
-var hourFourteen = moment().hour(14);
-var hourFifteen = moment().hour(15);
-var hourSixteen = moment().hour(16);
-var hourSeventeen = moment().hour(17);
 
 loadTasks();
